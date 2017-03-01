@@ -97,7 +97,7 @@ console.assert(cat.growl() === "meow");
 // prototype that is called `squeal` that returns the secret string.
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
-// var getSecret;
+
     class KeepSecret {
         constructor (secret){
             this.getSecret = function(){
@@ -135,8 +135,23 @@ console.assert(dontTellNobody.squeal() === mySecret);
 // the secret data.
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
+class Key {
+    constructor(){
+        this.keyFunction = function(){
+        return keyData
+        }
+    }
+}
 
-
+class Safe {
+    constructor(keptSafe, keyData) {
+        this.unlock = function(key){
+            if (key === keyData){
+            return keptSafe
+            }
+        }
+    }
+}
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
